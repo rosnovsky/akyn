@@ -17,7 +17,6 @@ gulp.task('stylus', function() {
 });
 
 
-
 gulp.task('browser-sync', ['nodemon'], function() {
   browserSync.init({
     proxy: "localhost:3000",  // local node app address
