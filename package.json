@@ -1,0 +1,39 @@
+{
+  "name": "akyn-blog-engine",
+  "version": "0.0.1",
+  "author": "Artem Rosnovsky <artem@rosnovsky.us> (http://rosnovsky.us/)",
+  "private": true,
+  "engines": {
+    "node": ">= 7.10.0"
+  },
+  "scripts": {
+    "test": "echo \"All is good\"",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosnovsky/akyn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rosnovsky/akyn/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "node-fetch": "^1.7.0",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2",
+    "vows": "^0.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
