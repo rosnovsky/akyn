@@ -10,7 +10,7 @@ const reload = browserSync.reload;
  * Gulp Tasks
  */
 
-gulp.task('image', () => {
+gulp.task('image', function() {
 	gulp.src('public/images/*')
     .pipe(imagemin([
 	imagemin.jpegtran({progressive: true, optimizationLevel: 2})],
