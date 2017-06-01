@@ -18,14 +18,14 @@ gulp.task('image', function() {
     .pipe(gulp.dest('public/compressed-images/'));
 });
 
-gulp.task('stylus', () => {
+gulp.task('stylus', function() {
 	gulp.src('public/stylesheets/*.styl')
     .pipe(stylus())
     .pipe(gulp.dest('./public/stylesheets/'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('browser-sync', ['nodemon'], () => {
+gulp.task('browser-sync', ['nodemon'], function() {
 	browserSync.init({
 		proxy: 'localhost:3000',  // Local node app address
 		port: 1337
@@ -42,20 +42,20 @@ gulp.task('nodemon', cb => {
 			'node_modules/'
 		]
 	})
-  .on('start', () => {
+  .on('start', function() {
 	if (!called) {
 		called = true;
 		cb();
 	}
 })
-  .on('restart', () => {
-	setTimeout(() => {
+  .on('restart', function() {
+	setTimeout(function() {
 		reload({stream: false});
 	}, 1000);
 });
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', function() {
 	gulp.watch('./src/stylesheets/*.styl', ['stylus']);
 });
 
