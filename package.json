@@ -21,6 +21,7 @@
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
+    "critical": "^0.8.4",
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "morgan": "~1.8.1",
@@ -31,13 +32,20 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.3.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-stylus": "^2.6.0",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "xo": "latest"
   },
   "xo": {
     "rules": {
-      "unicorn/filename-case": ["error", { "case": "camelCase" }]
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ]
     }
-}
+  }
 }

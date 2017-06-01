@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const nodemon = require('gulp-nodemon');
 const stylus = require('gulp-stylus');
+const watch = require('gulp-watch');
 const imagemin = require('gulp-imagemin');
 
 const reload = browserSync.reload;
@@ -10,7 +11,7 @@ const reload = browserSync.reload;
  * Gulp Tasks
  */
 
-gulp.task('image', function() {
+gulp.task('image', () => {
 	gulp.src('public/images/*')
     .pipe(imagemin([
 	imagemin.jpegtran({progressive: true, optimizationLevel: 2})],
@@ -18,14 +19,14 @@ gulp.task('image', function() {
     .pipe(gulp.dest('public/compressed-images/'));
 });
 
-gulp.task('stylus', function() {
+gulp.task('stylus', () => {
 	gulp.src('public/stylesheets/*.styl')
     .pipe(stylus())
     .pipe(gulp.dest('./public/stylesheets/'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('browser-sync', ['nodemon'], function() {
+gulp.task('browser-sync', ['nodemon'], () => {
 	browserSync.init({
 		proxy: 'localhost:3000',  // Local node app address
 		port: 1337
@@ -42,20 +43,20 @@ gulp.task('nodemon', cb => {
 			'node_modules/'
 		]
 	})
-  .on('start', function() {
+  .on('start', () => {
 	if (!called) {
 		called = true;
 		cb();
 	}
 })
-  .on('restart', function() {
-	setTimeout(function() {
+  .on('restart', () => {
+	setTimeout(() => {
 		reload({stream: false});
 	}, 1000);
 });
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
 	gulp.watch('./src/stylesheets/*.styl', ['stylus']);
 });
 
