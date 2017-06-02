@@ -37,16 +37,8 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-stylus": "^2.6.0",
     "gulp-watch": "^4.3.11",
-    "xo": "latest"
-  },
-  "xo": {
-    "rules": {
-      "unicorn/filename-case": [
-        "error",
-        {
-          "case": "camelCase"
-        }
-      ]
-    }
+    "mocha": "^3.4.2",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
   }
 }

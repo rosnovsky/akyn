@@ -1,6 +1,6 @@
 # Akyn
 
-![Status](https://api.travis-ci.org/rosnovsky/akyn.svg?branch=master) ![Coverage Status](https://coveralls.io/repos/github/rosnovsky/akyn/badge.svg?branch=master)
+![Status](https://api.travis-ci.org/rosnovsky/akyn.svg?branch=master) 
 
 Akyn Blog Engine is a project intended for education and fun. 
 
