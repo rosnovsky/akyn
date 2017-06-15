@@ -13,9 +13,9 @@ describe('Helpers', function() {
     it('Returns 2017 in 2017', function() {
       const year = new Date().getFullYear();
       assert.equal(year, 2017);
-    })
-  })
-})
+    });
+  });
+});
 
 describe('Routes', function() {
 	describe('GET /', function() {
@@ -33,5 +33,4 @@ describe('Routes', function() {
 	      .expect(404, done);
 	  });
 	});
-
-})
+});

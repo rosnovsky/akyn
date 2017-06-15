@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "gulp stylus",
-    "start": "gulp"
+    "start": "gulp",
+    "test": "mocha test/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "~1.17.1",
+    "completion": "^1.0.1",
     "cookie-parser": "~1.4.3",
-    "critical": "^0.8.4",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "gulp": "^3.9.1",
+    "mocha": "^3.4.2",
     "morgan": "~1.8.1",
     "node-fetch": "^1.7.0",
     "pug": "~2.0.0-beta11",
@@ -32,12 +35,11 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "coveralls": "^2.13.1",
-    "gulp": "^3.9.1",
+    "critical": "^0.8.4",
     "gulp-imagemin": "^3.3.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-stylus": "^2.6.0",
     "gulp-watch": "^4.3.11",
-    "mocha": "^3.4.2",
     "should": "^11.2.1",
     "supertest": "^3.0.0"
   }
